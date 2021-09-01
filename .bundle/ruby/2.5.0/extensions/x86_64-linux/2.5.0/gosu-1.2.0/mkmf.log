@@ -1,0 +1,175 @@
+"pkg-config --exists gl"
+| pkg-config --libs gl
+=> "-lGL\n"
+"gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-2.5.0 -I/usr/include/ruby-2.5.0/ruby/backward -I/usr/include/ruby-2.5.0 -I. -I../../include -I../../dependencies/stb -I../../dependencies/utf8proc -I../../dependencies/SDL_sound -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -fdebug-prefix-map=/build/ruby2.5-FWwz7w/ruby2.5-2.5.1=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -DGOSU_DEPRECATED= -DNDEBUG conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector -rdynamic -Wl,-export-dynamic     -lruby-2.5  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-2.5.0 -I/usr/include/ruby-2.5.0/ruby/backward -I/usr/include/ruby-2.5.0 -I. -I../../include -I../../dependencies/stb -I../../dependencies/utf8proc -I../../dependencies/SDL_sound -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -fdebug-prefix-map=/build/ruby2.5-FWwz7w/ruby2.5-2.5.1=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -DGOSU_DEPRECATED= -DNDEBUG conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector -rdynamic -Wl,-export-dynamic     -lruby-2.5 -lGL -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+| pkg-config --cflags-only-I gl
+=> "-I/usr/include/libdrm\n"
+| pkg-config --cflags-only-other gl
+=> "\n"
+| pkg-config --libs-only-l gl
+=> "-lGL\n"
+package configuration for gl
+cflags: 
+ldflags: 
+libs: -lGL
+
+"pkg-config --exists sdl2"
+| pkg-config --libs sdl2
+=> "-lSDL2\n"
+"gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-2.5.0 -I/usr/include/ruby-2.5.0/ruby/backward -I/usr/include/ruby-2.5.0 -I. -I../../include -I../../dependencies/stb -I../../dependencies/utf8proc -I../../dependencies/SDL_sound -I/usr/include/libdrm -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -fdebug-prefix-map=/build/ruby2.5-FWwz7w/ruby2.5-2.5.1=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -DGOSU_DEPRECATED= -DNDEBUG  conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector -rdynamic -Wl,-export-dynamic      -lGL -lruby-2.5 -lSDL2 -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+| pkg-config --cflags-only-I sdl2
+=> "-I/usr/include/SDL2\n"
+| pkg-config --cflags-only-other sdl2
+=> "-D_REENTRANT\n"
+| pkg-config --libs-only-l sdl2
+=> "-lSDL2\n"
+package configuration for sdl2
+cflags: -D_REENTRANT
+ldflags: 
+libs: -lSDL2
+
+"pkg-config --exists vorbisfile"
+| pkg-config --libs vorbisfile
+=> "-lvorbisfile\n"
+"gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-2.5.0 -I/usr/include/ruby-2.5.0/ruby/backward -I/usr/include/ruby-2.5.0 -I. -I../../include -I../../dependencies/stb -I../../dependencies/utf8proc -I../../dependencies/SDL_sound -I/usr/include/libdrm -I/usr/include/SDL2 -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -fdebug-prefix-map=/build/ruby2.5-FWwz7w/ruby2.5-2.5.1=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -DGOSU_DEPRECATED= -DNDEBUG  -D_REENTRANT conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector -rdynamic -Wl,-export-dynamic       -lGL -lSDL2 -lruby-2.5 -lvorbisfile -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+| pkg-config --cflags-only-I vorbisfile
+=> "\n"
+| pkg-config --cflags-only-other vorbisfile
+=> "\n"
+| pkg-config --libs-only-l vorbisfile
+=> "-lvorbisfile\n"
+package configuration for vorbisfile
+cflags: 
+ldflags: 
+libs: -lvorbisfile
+
+"pkg-config --exists openal"
+| pkg-config --libs openal
+=> "-lopenal\n"
+"gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-2.5.0 -I/usr/include/ruby-2.5.0/ruby/backward -I/usr/include/ruby-2.5.0 -I. -I../../include -I../../dependencies/stb -I../../dependencies/utf8proc -I../../dependencies/SDL_sound -I/usr/include/libdrm -I/usr/include/SDL2  -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -fdebug-prefix-map=/build/ruby2.5-FWwz7w/ruby2.5-2.5.1=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -DGOSU_DEPRECATED= -DNDEBUG  -D_REENTRANT  conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector -rdynamic -Wl,-export-dynamic        -lGL -lSDL2 -lvorbisfile -lruby-2.5 -lopenal -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+| pkg-config --cflags-only-I openal
+=> "-I/usr/include/AL\n"
+| pkg-config --cflags-only-other openal
+=> "\n"
+| pkg-config --libs-only-l openal
+=> "-lopenal\n"
+package configuration for openal
+cflags: 
+ldflags: 
+libs: -lopenal
+
+"pkg-config --exists sndfile"
+package configuration for sndfile is not found
+"pkg-config --exists libmpg123"
+package configuration for libmpg123 is not found
+"pkg-config --exists fontconfig"
+| pkg-config --libs fontconfig
+=> "-lfontconfig -lfreetype\n"
+"gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-2.5.0 -I/usr/include/ruby-2.5.0/ruby/backward -I/usr/include/ruby-2.5.0 -I. -I../../include -I../../dependencies/stb -I../../dependencies/utf8proc -I../../dependencies/SDL_sound -I/usr/include/libdrm -I/usr/include/SDL2  -I/usr/include/AL -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -fdebug-prefix-map=/build/ruby2.5-FWwz7w/ruby2.5-2.5.1=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -DGOSU_DEPRECATED= -DNDEBUG  -D_REENTRANT   conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector -rdynamic -Wl,-export-dynamic         -lGL -lSDL2 -lvorbisfile -lopenal -lruby-2.5 -lfontconfig -lfreetype -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+| pkg-config --cflags-only-I fontconfig
+=> "-I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/libpng16\n"
+| pkg-config --cflags-only-other fontconfig
+=> "\n"
+| pkg-config --libs-only-l fontconfig
+=> "-lfontconfig -lfreetype\n"
+package configuration for fontconfig
+cflags: 
+ldflags: 
+libs: -lfontconfig -lfreetype
+
+have_library: checking for -lopenal... -------------------- yes
+
+"gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-2.5.0 -I/usr/include/ruby-2.5.0/ruby/backward -I/usr/include/ruby-2.5.0 -I. -I../../include -I../../dependencies/stb -I../../dependencies/utf8proc -I../../dependencies/SDL_sound -I/usr/include/libdrm -I/usr/include/SDL2  -I/usr/include/AL -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/libpng16 -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -fdebug-prefix-map=/build/ruby2.5-FWwz7w/ruby2.5-2.5.1=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -DGOSU_DEPRECATED= -DNDEBUG  -D_REENTRANT    conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector -rdynamic -Wl,-export-dynamic          -lGL -lSDL2 -lvorbisfile -lopenal -lfontconfig -lfreetype -lruby-2.5 -lopenal  -lGL -lSDL2 -lvorbisfile -lopenal -lfontconfig -lfreetype -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: 
+14: int t(void) { ; return 0; }
+/* end */
+
+--------------------
+
+have_header: checking for AL/al.h... -------------------- yes
+
+"gcc -E -I/usr/include/x86_64-linux-gnu/ruby-2.5.0 -I/usr/include/ruby-2.5.0/ruby/backward -I/usr/include/ruby-2.5.0 -I. -I../../include -I../../dependencies/stb -I../../dependencies/utf8proc -I../../dependencies/SDL_sound -I/usr/include/libdrm -I/usr/include/SDL2  -I/usr/include/AL -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/libpng16 -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -fdebug-prefix-map=/build/ruby2.5-FWwz7w/ruby2.5-2.5.1=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -DGOSU_DEPRECATED= -DNDEBUG  -D_REENTRANT     conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <AL/al.h>
+/* end */
+
+--------------------
+
